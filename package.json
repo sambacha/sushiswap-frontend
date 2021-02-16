@@ -160,6 +160,8 @@
     "build": "CI= GENERATE_SOURCEMAP=false react-app-rewired build --scripts-version react-scripts",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "prebuild": "npm run generate-build-version",
+    "generate-build-version": "node generate-build-version",
     "build:styles": "postcss src/tailwind.css -o src/styles.css",
     "prebuild": "NODE_ENV=production npm run build:styles",
     "prestart": "npm run build:styles",
